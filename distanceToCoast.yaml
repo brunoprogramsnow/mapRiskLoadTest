@@ -1,0 +1,13 @@
+config:
+  target: 'http://api.staging.maprisk.com'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+  defaults:
+    headers:
+      x-auth-key:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1ODBmOWY1NjYzZjM5MDAwOTM2ZTA3ZmUiLCJleHAiOm51bGx9.8nW7NQwr066mjDZ-UjRXuLpeWBf8y9Vt5G7CoxMchoA'
+scenarios:
+  - flow:
+    - get:
+        url: "/reports?reportList=distanceToCoast&poi[latitude]=27.6401408&poi[longitude]=-80.3838086&poi[street]=300 Miracle Mile Plaza&poi[city]=Vero Beach&poi[state]=FL&poi[zip]=32960&key=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1ODBmOWY1NjYzZjM5MDAwOTM2ZTA3ZmUiLCJleHAiOm51bGx9.8nW7NQwr066mjDZ-UjRXuLpeWBf8y9Vt5G7CoxMchoA" 
+

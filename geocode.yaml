@@ -1,0 +1,15 @@
+config:
+  target: 'http://api.staging.maprisk.com'
+  phases:
+    - duration: 60
+      arrivalRate: 1
+  defaults:
+    headers:
+      x-auth-key:'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1ODBmOWY1NjYzZjM5MDAwOTM2ZTA3ZmUiLCJleHAiOm51bGx9.8nW7NQwr066mjDZ-UjRXuLpeWBf8y9Vt5G7CoxMchoA'
+scenarios:
+  - flow:
+    - get:
+        url: "/geocode?addressLine=300 Miracle Mile Plaza, Vero Beach,  FL&key=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI1ODBmOWY1NjYzZjM5MDAwOTM2ZTA3ZmUiLCJleHAiOm51bGx9.8nW7NQwr066mjDZ-UjRXuLpeWBf8y9Vt5G7CoxMchoA" 
+
+
+
