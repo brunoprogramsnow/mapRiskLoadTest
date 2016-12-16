@@ -1,0 +1,24 @@
+{
+  "config": {
+    "target": "http://api.staging.maprisk.com",
+    "phases": [
+      {"duration": "60", "arrivalCount": 1200 , "arrivalRate": 10}
+    ],
+    "payload": [{
+      "path": "./TXDataSample.csv",
+      "fields": ["UUID","Template","Street", "City", "State", "Zip","OutputStreet","OutputCity","OutputState","OutputZip", "Longitude", "Latitude", "Header"], 
+      "order" : "sequence"
+    }]
+  },
+  "scenarios": [
+    {
+      "flow": [
+        {
+          "get": {
+            "url": "/reports?reportList=distanceToCoast&poi[latitude]={{Latitude}}&poi[longitude]={{Longitude}}&poi[street]={{Street}}&poi[city]={{City}}&poi[state]={{State}}&poi[zip]={{Zip}}&key={{Header}}"
+          }
+        }
+      ]
+    }
+  ]
+}
